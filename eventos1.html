@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <button id="boton">Púlsame</button>
+</body>
+</html>
+<script>
+    addEventListener("click", cambiarColor)
+    //document.getElementById("boton").addEventListener("click", cambiarColorBoton)
+    //document.body.addEventListener("click", cambiarColorDocumento)
+    
+    function colorAleatorio(){
+        var simbolos, color;
+	    simbolos = "0123456789ABCDEF";
+	    color = "#";
+
+        for(var i = 0; i < 6; i++){
+            color = color + simbolos[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    /*function cambiarColorBoton(evt){
+         evt.target.style.backgroundColor=colorAleatorio();
+        
+    }*/
+    function cambiarColor(evt){
+        //console.log(evt.target.type)
+        if (evt.target.type=="submit"){
+            document.body.style.backgroundColor=colorAleatorio();
+            console.log(evt.target.type)
+        } else {
+            document.body.style.backgroundColor="#ffffff";
+        }
+    }   
+/*
+    function cambiarColorDocumento(){
+        document.body.style.background=colorAleatorio();
+        //"#ffffff"
+    }*/
+</script>

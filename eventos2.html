@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <!--, te muestre en todo momento
+    la posición actual del ratón en pantalla-->
+    <h1>Posición ratón en tiempo real</h1>
+    <ul>
+        <li class="li"></li>
+        <li class="li"></li>
+    </ul>
+</body>
+</html>
+<script>
+    //differ?¿
+ document.addEventListener("mousemove", function(e){
+    
+    let X=document.body.getElementsByClassName("li")[0]
+    let Y=document.body.getElementsByClassName("li")[1]
+    X.innerHTML=" Posicion X:"+e.clientX
+    Y.innerHTML=" Posicion Y:"+e.clientY
+ })
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style-eventos3.css" media="screen" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <!--mover una caja dentro de la ventana del navegador tanto con las teclas
+    de desplazamiento del teclado central como con las del teclado numérico.-->
+    <div id="cuadrado"></div>
+</body>
+</html>
+<script>
+    let div=document.getElementById("cuadrado")
+     //posiciones iniciales
+    let X=0;
+    let Y=0;
+    document.addEventListener("keydown", function(e){
+        console.log(e.code)
+        switch (e.code){
+            case 'ArrowLeft': 
+                X-=1;
+                div.style.left= X+"px";
+                break;
+            case 'ArrowRight':
+                X+=1;
+                div.style.left= X+"px";
+                break;
+            case 'ArrowUp':
+                Y-=1;
+                div.style.top=Y+"px";
+                break;
+            case 'ArrowDown':
+                Y+=1;
+                div.style.top=Y+"px";
+                break;
+        }
+        console.log(div.style)
+    })
+</script>

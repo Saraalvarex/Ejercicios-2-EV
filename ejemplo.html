@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./formulario.js" defer></script>
+</head>
+<body>
+    <!--FORMULARIOS-->
+    <h1> FORMULARIO JS </h1>
+    <form id="formulario">
+        <label> INPUT DE TEXTO <input id="texto" type="text"/></label><br/>
+        <label> INPUT PASSWORD <input id="pwd" type="password"/></label><br/>
+        <label> INPUT NUMBER <input id="number" type="number"/></label><br/>
+        <label> INPUT TEXTO <input type="text" id="input" /></label><br/>
+        <label> INPUT EMAIL <input type="email" id="email" /></label><br/>
+
+        <!--MISMO ID DIFERENTE ID-->
+        <label> INPUT RADIOBUTON1 <input type="radio" name="nameRadio" id="radiobuton1"/></label><br/>
+        <label> INPUT RADIOBUTON2 <input type="radio" name="nameRadio" id="radiobuton2"/></label><br/>
+        <label> INPUT RADIOBUTON3 <input type="radio" name="nameRadio" id="radiobuton3"/></label><br/>
+
+        <label> INPUT COLOR <input type="color" id="idColor"/> </label><br/>
+        <label> INPUT HIDDEN <input id="idHidden" type="hidden" value="34657"/></label><br/>
+        <label> TEXT AREA <br/><textarea name="textarea" id="idText" rows="10" cols="50">Escribe algo</textarea></label><br/>
+       
+        <!--DATALIST-->
+        <label> DATALIST
+        <input type="text" name="lista" list="listaDatos"></label>
+        <datalist id="listaDatos">
+            <option value="valor1">PNG</option>
+            <option value="valor2">JPEG</option>
+            <option value="valor3">GIF</option>
+            <option value="valor4">TGA</option>
+          </datalist>
+        </label><br/>
+
+        <!--SELECT-->
+        <label> SELECT
+        <select id="idSelect" name="select">
+            <option value="value1">1</option>
+            <option value="value2">2</option>
+            <option value="value3">3</option>
+          </select>
+        </label><br/>
+        <!--DIFERENTE NAME E ID-->
+        <!--CHECKBOX-->
+        <label><input type="checkbox" id="idCheckbox1" name="primerCheckbox"> Este es mi primer checkbox</label><br>
+        <label><input type="checkbox" id="idCheckbox2" name="segundoCheckbox"> Este es mi segundo checkbox</label><br>
+        <!--SUBMIT-->
+        <label><input type="submit" id="idSubmit" name="enviar"/></label>
+    </form>
+
+    <h1>INFORMACION</h1>
+    <ul>
+        <li>Input de texto: </li>
+        <li>Input password: </li>
+        <li>Input numero: </li>
+        <li>Input texto: </li>
+        <li>Input radio buton: </li>
+        <li>Input color: </li>
+        <li>Input hidden: </li>
+        <li>Text area: </li>
+        <li>Datalist: </li>
+        <li>Select: </li>
+        <li>Checkbox: </li>
+    </ul>
+</body>
+</html>
